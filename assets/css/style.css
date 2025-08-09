@@ -1,0 +1,106 @@
+
+.mobile-menu-transition {
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  display: block; 
+}
+
+.mobile-menu-open {
+  max-height: 500px; 
+  opacity: 1;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+svg {
+  backface-visibility: hidden;
+  transform: translateZ(0); 
+}
+
+body.modal-open {
+  overflow: hidden;
+  padding-right: var(--scrollbar-compensation, 0px);
+}
+.no-scroll {
+  overflow: hidden;
+  padding-right: 35px; 
+}
+
+.burger-svg .line {
+    transition: all 0.3s ease-in-out;
+  }
+
+.burger-svg.open .top {
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+  d: path("M 30,30 L 70,70");
+}
+
+.burger-svg.open .bottom {
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  d: path("M 30,70 L 70,30");
+}
+
+ #price {
+            
+            display: inline-block;
+            
+            
+            min-width: 5ch;
+
+            
+            text-align: center;
+        }
+
+.nav-link, svg {
+  transition: color 0.3s ease;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.6;
+  }
+}
+
+.card {
+  background-color: #080808;
+  z-index: 10;
+  position: relative;
+}
+
+
+.faq-content {
+      transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+      transform-origin: top;
+    }
+
+
+ @layer utilities {
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow: 0 0 25px 5px rgba(79, 57, 246, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 40px 10px rgba(79, 57, 246, 0.35);
+      }
+    }
+    .hover\\:animate-glow:hover {
+      animation: glowPulse 2s ease-in-out infinite;
+    }
+  }
+
