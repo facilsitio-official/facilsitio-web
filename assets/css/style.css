@@ -1,6 +1,6 @@
 
 .mobile-menu-transition {
-  transition: max-height 0.4s ease, opacity 0.4s ease;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -8,7 +8,7 @@
 }
 
 .mobile-menu-open {
-  max-height: 500px; 
+  max-height: 700px; 
   opacity: 1;
 }
 
@@ -104,3 +104,6 @@ body.modal-open {
     }
   }
 
+.custom-left {
+  margin-left: -15px; /* ajusta el valor */
+}
