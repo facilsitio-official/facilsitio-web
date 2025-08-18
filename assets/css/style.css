@@ -107,3 +107,15 @@ body.modal-open {
 .custom-left {
   margin-left: -15px; /* ajusta el valor */
 }
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
