@@ -75,6 +75,25 @@
       <a href="https://wa.me/51936124314?text=Hola%2C%20estoy%20interesado%20en%20tu%20servicio%20de%20dise%C3%B1o%20web.%20%C2%BFPodemos%20conversar%3F." class="">Contacto</a>
     </li>
 
+   <li class="relative mt-1 nav-link" id="blog-menu">
+  <div class="flex items-center gap-2 px-2 py-1 hover:text-[#8B5CF6] cursor-pointer">
+    <a href="/blog">Blog</a>
+  </div>
+
+  <!-- Submenú -->
+  <ul id="submenu-blog" 
+      class="absolute left-0 top-full mt-4 hidden w-80 bg-gray-900 text-gray-200 rounded-xl shadow-lg border border-gray-700 opacity-0 translate-y-2 transition-all duration-300">
+    <li class="px-4 py-2 hover:bg-gray-800 hover:text-white rounded-t-xl">
+      <a href="/blog/precios.html">Precios de diseño web en Perú 2025</a>
+    </li>
+    <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+      <a href="#">Cómo elegir la mejor página web para tu negocio en Lima</a>
+    </li>
+    <li class="px-4 py-2 hover:bg-gray-800 hover:text-white rounded-b-xl">
+      <a href="#">Ventajas de tener un sitio web con dominio propio</a>
+    </li>
+  </ul>
+</li>
     <li class="flex items-center gap-2 mt-1 nav-link hover:text-[#4F46E5]">
    
       <a href="#" onclick="scrollToSection('faq'); return false;">FAQ</a>
@@ -130,6 +149,11 @@
     <li >
       <a href="https://wa.me/51936124314?text=Hola%2C%20estoy%20interesado%20en%20tu%20servicio%20de%20dise%C3%B1o%20web.%20%C2%BFPodemos%20conversar%3F." onclick="scrollToSection('faq'); return false;" class="nav-link flex items-center gap-3 hover:text-indigo-700">
         Contacto
+      </a>
+    </li>
+     <li >
+      <a href="#blog" class="nav-link flex items-left justify-start gap-3 hover:text-indigo-700">
+        Blog
       </a>
     </li>
     <li >
@@ -702,6 +726,7 @@
   <script src="assets/js/modal.js" async></script>
   <script src="assets/js/funtions.js" async></script> 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/blog-js.js"></script>
   <script>AOS.init();</script>
 
 
@@ -713,7 +738,5 @@
     }
   }
 </script>
- <!-- Google Analytics -->
 </body>
-  
 </html>
