@@ -19,11 +19,11 @@
 <nav id="navbar" class="transition-all duration-300 bg-transparent text-white backdrop-blur-lg supports-backdrop-blur:bg-white/30 sticky top-0 z-50  md:rounded-none border-b border-white/20">
 
 
-  <div class="container mx-auto px-4 py-1 md:py-1 flex items-center justify-between md:justify-start relative">
+  <div class="container mx-auto px-4 py-2 md:py-1 flex items-center justify-between md:justify-start relative">
   
   <!-- LOGO -->
 <a id="site-logo" href="https://facilsitio.com" class="flex items-center transition-transform duration-200 hover:scale-105 active:scale-95">
-  <img loading="lazy" src="../assets/img/logo.png" fetchpriority=high alt="Logo" class="md:h-[72px] h-15 w-auto object-contain" />
+  <img loading="lazy" src="../assets/img/logo.png" fetchpriority=high alt="Logo" class="md:h-[72px] h-[60px] w-auto object-contain" />
 </a>
 
 
@@ -109,13 +109,13 @@
 
 
     <li>
-  <a href="#" onclick="scrollToSection('features'); return false;" class="nav-link flex items-center gap-4 hover:text-indigo-700">
+  <a href="../index.html#features" onclick="scrollToSection('features'); return false;" class="nav-link flex items-center gap-4 hover:text-indigo-700">
     Servicios
   </a>
 </li>
 
     <li>
-      <a href="#" onclick="scrollToSection('pricing'); return false;" class="nav-link flex items-left gap-4 hover:text-indigo-700">
+      <a href="../index.html#pricing" onclick="scrollToSection('pricing'); return false;" class="nav-link flex items-left gap-4 hover:text-indigo-700">
         Precios
       </a>
     </li>
@@ -124,13 +124,41 @@
         Contacto
       </a>
     </li>
-     <li >
-      <a href="#blog" class="nav-link flex items-left justify-start gap-3 hover:text-indigo-700">
-        Blog
+    <li class="md:hidden"> <!-- Oculto en desktop, visible en móvil -->
+  <button 
+    onclick="toggleSubmenu('blogSubmenu')" 
+    class="w-full text-left flex items-center justify-between gap-3 hover:text-indigo-700 px-4 py-2"
+  >
+    <span class="flex items-left gap-3">
+      Blog
+    </span>
+    <!-- Icono de flecha -->
+    <svg id="blogArrow" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <!-- Submenú oculto -->
+  <ul id="blogSubmenu" class="hidden flex-col pl-8 text-sm text-gray-400 font-medium text-xl">
+    <li>
+      <a href="/blog/precios.html" class="block py-2 hover:text-indigo-500">
+        Precios de diseño web en Perú 2025
       </a>
     </li>
+    <li>
+      <a href="#como-elegir" class="block py-2 hover:text-indigo-500">
+        Cómo elegir la mejor página web para tu negocio
+      </a>
+    </li>
+    <li>
+      <a href="#ventajas" class="block py-2 hover:text-indigo-500">
+        Ventajas de tener un sitio web
+      </a>
+    </li>
+  </ul>
+</li>
     <li >
-      <a href="#faq" class="nav-link flex items-left justify-start gap-3 hover:text-indigo-700">
+      <a href="../index.html#faq" class="nav-link flex items-left justify-start gap-3 hover:text-indigo-700">
         FAQ
       </a>
     </li>
@@ -147,8 +175,8 @@
 
   <!-- Contenido -->
   <header class="relative z-10 text-center py-10">
-    <h1 class="text-4xl md:text-5xl font-bold text-white">💻 Precios de Diseño Web en Perú 2025</h1>
-    <p class="mt-3 text-lg text-gray-400 max-w-2xl mx-auto">En FacilSitio, creamos páginas web modernas, rápidas y económicas que superan a la competencia en calidad y precio.</p>
+    <h1 class="text-4xl md:text-5xl font-bold text-white">Precios de Diseño Web en Perú 2025</h1>
+    <p class="mt-3 text-xl text-gray-400 max-w-2xl mx-auto p-3">En <span class="text-indigo-700 font-bold">FacilSitio</span>, creamos páginas web modernas, rápidas y económicas que superan a la competencia en calidad y precio.</p>
   </header>
 
   <!-- Comparativa -->
@@ -167,22 +195,29 @@
         </thead>
         <tbody class="text-gray-300">
           <tr class="border-b border-gray-700 hover:bg-gray-800">
-            <td class="p-4">FacilSitio</td>
+            <td class="p-4"><span class="text-indigo-700 font-medium">FacilSitio</span></td>
             <td class="p-4 font-bold text-green-400">S/200</td>
             <td class="p-4">✅ 1 año gratis</td>
             <td class="p-4">7 días</td>
             <td class="p-4">✅</td>
           </tr>
           <tr class="border-b border-gray-700 hover:bg-gray-800">
-            <td class="p-4">Competencia A</td>
-            <td class="p-4 text-red-400">S/500+</td>
+            <td class="p-4">webperu.com.pe</td>
+            <td class="p-4 text-red-400">S/590</td>
             <td class="p-4">❌</td>
             <td class="p-4">15-20 días</td>
             <td class="p-4">✅</td>
           </tr>
           <tr class="hover:bg-gray-800">
-            <td class="p-4">Competencia B</td>
-            <td class="p-4 text-red-400">S/800+</td>
+            <td class="p-4">dmcreative-web.com</td>
+            <td class="p-4 text-red-400">S/350</td>
+            <td class="p-4">✅ (con costo extra)</td>
+            <td class="p-4">20+ días</td>
+            <td class="p-4">✅</td>
+          </tr>
+          <tr class="hover:bg-gray-800">
+            <td class="p-4">urpyweb.com</td>
+            <td class="p-4 text-red-400">S/650</td>
             <td class="p-4">✅ (con costo extra)</td>
             <td class="p-4">20+ días</td>
             <td class="p-4">✅</td>
@@ -191,6 +226,18 @@
       </table>
     </div>
   </section>
+
+  <section class="w-full  flex justify-center items-center p-4">
+  <div class="w-full max-w-6xl md:max-w-4xl lg:max-w-3xl">
+    <img 
+      src="../assets/img/banner-f.svg" 
+      alt="Servicio de creación de páginas web" 
+      class="w-full h-auto rounded-lg shadow-lg object-cover"
+      loading="lazy"
+    >
+  </div>
+</section>
+
 
   <!-- Beneficios -->
   <section class="relative z-10 px-4 py-10 max-w-6xl mx-auto">
@@ -206,18 +253,82 @@
 
   <!-- CTA -->
   <section class="relative z-10 text-center py-12">
-    <h3 class="text-2xl font-bold text-white mb-4">¿Listo para tener tu sitio web?</h3>
+    <h3 class="text-2xl font-bold text-white mb-4 py-5 p-2">¿Listo para tener tu sitio web?</h3>
     <a href="https://facilsitio.com" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white font-semibold shadow-lg">Contáctanos</a>
   </section>
 
-  <footer class="relative z-10 text-center py-6 text-gray-500 text-sm border-t border-gray-800">
-    © 2025 FacilSitio. Todos los derechos reservados.
-  </footer>
+   <!-- ================================= CONTACT & FOOTER ================================= -->
+<footer class="bg-[#000000] text-gray-200 pt-12 pb-6 ">
+  <div class="border-t border-white opacity-15 mb-8"></div>
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-[15px] text-gray-300">
+    <div>
+     <a id="site-logo" href="./" class="flex items-center transition-transform duration-200 hover:scale-105 active:scale-95">
+  <img src="../assets/img/logo.png" alt="Logo" class="md:h-17 h-15 w-auto object-contain align-middle " />
+</a>
+      
+      <p class="leading-relaxed text-gray-400">Impulsa tu negocio con una página web profesional, moderna y a tu medida.</p>
+    </div>
+    <div class="justify-center text-center md:text-left">
+      <h4 class=" text-lg font-semibold text-white mb-3">Enlaces</h4>
+      <ul class="space-y-4">
+        <li><a href="../index.html#pricing" onclick="scrollToSection('pricing'); return false;" class="hover:text-indigo-400">Precios</a></li>
+        <li><a href="../index.html#features" onclick="scrollToSection('features'); return false;" class="hover:text-indigo-400">Servicios</a></li>
+        <li><a href="https://wa.me/51936124314?text=Hola%2C%20estoy%20interesado%20en%20tu%20servicio%20de%20dise%C3%B1o%20web.%20%C2%BFPodemos%20conversar%3F." class="hover:text-indigo-400">Contacto</a></li>
+        <li><a href="../index.html#faq" onclick="scrollToSection('faq'); return false;" class="hover:text-indigo-400">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="justify-center text-center md:text-left">
+      <h4 class="text-lg font-semibold text-white mb-3">Transparencia</h4>
+      <ul class="space-y-4">
+        <li><a href="#" onclick="handleLegalLink(event, 'terms')" class="hover:text-indigo-400 cursor-pointer">Términos y Condiciones</a></li>
+        <li><a href="#" onclick="handleLegalLink(event, 'privacy')" class="hover:text-indigo-400 cursor-pointer">Políticas de Privacidad</a></li>
+        <li><a href="#" onclick="handleLegalLink(event, 'cookies')" class="hover:text-indigo-400 cursor-pointer">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div class="justify-center text-center md:text-left">
+      <h4 class="text-lg font-semibold text-white mb-3">Contacto</h4>
+      <p>Email: <a href="mailto:hola@facilsitio.com" class="hover:text-indigo-400">hola@facilsitio.com</a></p>
+      <p>Teléfono: +51 936 124 314</p>
+      <div class="flex space-x-4 mt-4 justify-center md:justify-start">
+        <a href="#" aria-label="LinkedIn" class="hover:text-indigo-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.037-1.852-3.037-1.853 0-2.135 1.445-2.135 2.939v5.667h-3.554v-11.5h3.413v1.569h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.272 2.372 4.272 5.456v6.327zM5.337 8.433c-1.144 0-2.072-.929-2.072-2.072s.928-2.072 2.072-2.072 2.072.929 2.072 2.072-.928 2.072-2.072 2.072zm1.777 12.019h-3.554v-11.5h3.554v11.5z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="legalModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 outline-none focus:outline-none" tabindex="-1">
+    <div class="bg-[#121212] text-white max-w-2xl w-full mx-4 md:mx-auto rounded-lg shadow-xl p-6 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeLegalModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-4xl">&times;</button>
+      <h2 id="modalTitle" class="text-2xl font-bold mb-2 text-center">Título</h2>
+      <p id="modalDate" class="text-sm text-center mb-4">Última actualización</p>
+      <div id="modalContent" class="space-y-4 text-sm text-gray-300"></div>
+      <div class="text-center mt-6">
+        <button onclick="closeLegalModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mt-10 text-center text-sm text-gray-500">
+    © 2025 Facil Sitio | Todos los derechos reservados.
+  </div>
+</footer>
+
 
   <script src="../assets/js/efectos/faq.js" defer></script>
   <script src="../assets/js/ui/burger_animation.js" async></script>
   <script src="../assets/js/modal.js" async></script>
   <script src="../assets/js/funtions.js" async></script> 
   <script src="../assets/js/blog-js.js"></script>
+  <script>
+  function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    const arrow = document.getElementById('blogArrow');
+    submenu.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+  }
+</script>
 </body>
 </html>

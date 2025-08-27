@@ -151,11 +151,40 @@
         Contacto
       </a>
     </li>
-     <li >
-      <a href="#blog" class="nav-link flex items-left justify-start gap-3 hover:text-indigo-700">
-        Blog
+    <!-- ITEM CON SUBMENÚ -->
+<li class="md:hidden"> <!-- Oculto en desktop, visible en móvil -->
+  <button 
+    onclick="toggleSubmenu('blogSubmenu')" 
+    class="w-full text-left flex items-center justify-between gap-3 hover:text-indigo-700 px-4 py-2"
+  >
+    <span class="flex items-left gap-3">
+      Blog
+    </span>
+    <!-- Icono de flecha -->
+    <svg id="blogArrow" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <!-- Submenú oculto -->
+  <ul id="blogSubmenu" class="hidden flex-col pl-8 text-sm text-gray-400 font-medium text-xl">
+    <li>
+      <a href="/blog/precios.html" class="block py-2 hover:text-indigo-500">
+        Precios de diseño web en Perú 2025
       </a>
     </li>
+    <li>
+      <a href="#como-elegir" class="block py-2 hover:text-indigo-500">
+        Cómo elegir la mejor página web para tu negocio
+      </a>
+    </li>
+    <li>
+      <a href="#ventajas" class="block py-2 hover:text-indigo-500">
+        Ventajas de tener un sitio web
+      </a>
+    </li>
+  </ul>
+</li>
     <li >
       <a href="#faq" class="nav-link flex items-left justify-start gap-3 hover:text-indigo-700">
         FAQ
@@ -728,7 +757,14 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/blog-js.js"></script>
   <script>AOS.init();</script>
-
+<script>
+  function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    const arrow = document.getElementById('blogArrow');
+    submenu.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+  }
+</script>
 
 <script>
   function scrollToSection(id) {
